@@ -1,6 +1,6 @@
 ﻿namespace Library.Infrastructure.Entities
 {
-    public class CourseNote
+    public class Course
     {
         public Guid Id { get; set; }
         public string CourseCode { get; set; }

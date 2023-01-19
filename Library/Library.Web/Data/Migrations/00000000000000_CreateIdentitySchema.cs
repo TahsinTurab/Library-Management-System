@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Library.Infrastructure.DbContexts;
 using System;
 
 namespace Library.Web.Data.Migrations

@@ -1,6 +1,7 @@
 ﻿using Library.Infrastructure.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace Library.Infrastructure.DbContexts
 {
@@ -27,33 +28,49 @@ namespace Library.Infrastructure.DbContexts
             base.OnConfiguring(optionsBuilder);
         }
 
-        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
-                {
-                    modelBuilder.Entity<Topic>().ToTable("Topics");
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>()
+                .HasOne(n => n.UserRole)
+                .WithOne(a => a.User)
+                .HasForeignKey<Role>(x => x.UserId);
 
-                    modelBuilder.Entity<CourseRegistration>().HasKey(c => new { c.CourseId, c.StudentId });
+            modelBuilder.Entity<User>()
+                .HasMany(a => a.BorrowedBook)
+                .WithOne(n => n.User)
+                .HasForeignKey(x => x.UserId);
 
-                    modelBuilder.Entity<Course>()
-                        .HasMany(n => n.Topics)
-                        .WithOne(a => a.Course)
-                        .HasForeignKey(x => x.CourseId);
+            modelBuilder.Entity<Book>()
+                .HasMany(a => a.BookDetails)
+                .WithOne(n => n.Book)
+                .HasForeignKey(x => x.BookId);
 
-                    modelBuilder.Entity<CourseRegistration>()
-                        .HasOne(a => a.Course)
-                        .WithMany(n => n.CourseStudents)
-                        .HasForeignKey(x => x.CourseId);
+            modelBuilder.Entity<BookDetails>()
+                .HasOne(n => n.BookBorrowed)
+                .WithOne(a => a.BookDetails)
+                .HasForeignKey<Borrow>(x => x.BookDetailsId);
 
-                    modelBuilder.Entity<CourseRegistration>()
-                        .HasOne(a => a.Student)
-                        .WithMany(n => n.StudentCourses)
-                        .HasForeignKey(x => x.StudentId);
+            modelBuilder.Entity<Borrow>()
+                .HasMany(a => a.Renews)
+                .WithOne(n => n.Borrow)
+                .HasForeignKey(x => x.BorrowId);
 
-                    base.OnModelCreating(modelBuilder);
-                }*/
+            modelBuilder.Entity<Course>()
+                .HasMany(a => a.Notes)
+                .WithOne(n => n.Course)
+                .HasForeignKey(x => x.CourseId);
 
-        // Ekhane je entity gular migration chalano lagbe segula add kora lagbe
-        // niche example deya holo: 
-        //public DbSet<Course> Courses { get; set; }
-        //public DbSet<Student> Students { get; set; }
+            base.OnModelCreating(modelBuilder);
+        }
+        
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<BookDetails> BookDatails { get; set; }
+        public DbSet<Borrow> Borrows { get; set; }
+        public DbSet<Renew> Renews { get; set; }
+        public DbSet<EBook> EBooks { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Note> Notes { get; set; }
     }
 }
