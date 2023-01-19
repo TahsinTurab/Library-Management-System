@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using Library.Infrastructure.DbContexts;
 
-namespace DevTrack.Infrastructure
+namespace Library.Infrastructure
 {
     public class InfrastructureModule: Module
     {
@@ -21,12 +21,12 @@ namespace DevTrack.Infrastructure
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<ApplicationDbContext>().As<IApplicationDbContext>()
-                .WithParameter("connectionString", _connectionString)
-                .WithParameter("migrationAssemblyName", _migrationAssemblyName)
-                .InstancePerLifetimeScope();
+            //builder.RegisterType<ApplicationDbContext>().As<IApplicationDbContext>()
+            //    .WithParameter("connectionString", _connectionString)
+            //    .WithParameter("migrationAssemblyName", _migrationAssemblyName)
+            //    .InstancePerLifetimeScope();
 
-            base.Load(builder);
+            //base.Load(builder);
         }
     }
 }
