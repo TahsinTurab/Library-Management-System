@@ -7,5 +7,7 @@
         public Guid BookDetailsId { get; set; }
         public DateTime IssueDate { get; set; }
         public DateTime ReturnDate { get; set; }
+        public int RenewedTimes { get; set; }
+        public List<Renew> Renew { get; set; }
     }
 }
