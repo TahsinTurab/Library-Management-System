@@ -1,0 +1,24 @@
+﻿@model RegisterModel
+@{
+    ViewData["Title"] = "Register a new membership";
+}
+
+
+<body>
+    <header id="register">
+        <nav>
+            <img src="resources/img/nstu.png" alt="Library | ICE" class="logo">
+            <ul class="main-nav">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-area="" asp-controller="Account" asp-action="Login">Log in</a></li>
+                <li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+</body>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

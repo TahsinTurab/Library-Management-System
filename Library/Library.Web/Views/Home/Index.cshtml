@@ -2,7 +2,231 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@*<div class="login-box">
+    <div class="login-logo">
+        <a href="index.html" class="theme-gradient-color"><b>DEV TRACK</b></a>
+    </div>
+    <partial name="_LoginPartial" />
+    <!-- /.login-logo -->
+</div>*@
+
+	<header id="home">
+		<nav>
+			<img src="~/resources/img/nstu.png" alt="Library | ICE" class="logo">
+			<ul class="main-nav">
+				<li><a href="#home">Home</a></li>
+				<li><a href="login.html">Log in</a></li>
+				<li><a href="register.html">Register</a></li>
+			</ul>
+		</nav>
+		<div class="header-box">
+			<div class="header-text-box">
+				<h1>Seminar Library</h1>
+				<h2>Information and Communication Engineering</h2>
+			</div>
+			<a asp-area="" asp-controller="Account" asp-action="Login" class="btn btn-full js--scroll-to-contact">Log in</a>
+			<a asp-area="" asp-controller="Account" asp-action="Register" class="btn btn-full js--scroll-to-contact">Register</a>
+		</div>
+	</header>
+
+	<section class="about-section js--about-section" id="about">
+		<div class="row">
+			<div class="col span_1_of_2 about-box js--about-box">
+				<h2 class="about-heading">Department of Information and Communication Engineering, NSTU</h2>
+				<p class="about-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+				<p class="about-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+				<a href="#" class="btn btn-ghost">Read More</a>
+			</div>
+			<div class="col span_1_of_2 about-box js--about-box">
+			<img src="~/resources/img/nstuminar.png" alt="Digisolve app on Laptop" class="laptop-image">
+			</div>
+		</div>
+	</section>
+
+	<section class="work-section">
+		<div class="row">
+			<h2 class="section-heading">Recently Arrived</h2>
+			<h3 class="section-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+		</div>
+		<ul class="work-portfolio clearfix">
+			<li>
+				<figure class="portfolio-image">
+					<img src="~/resources/img/bio_book.jpg" alt="BioInformatics">
+					<p class="work-para">BioInformatics</p>
+				</figure>
+			</li>
+			<li>
+				<figure class="portfolio-image">
+					<img src="~/resources/img/ai_world.jpg" alt="AI World">
+					<p class="work-para">AI World</p>
+				</figure>
+			</li>
+			<li>
+				<figure class="portfolio-image">
+					<img src="~/resources/img/ml_book.jpg" alt="Ml">
+					<p class="work-para">O'Reilly ML</p>
+				</figure>
+			</li>
+			<li>
+				<figure class="portfolio-image">
+					<img src="~/resources/img/graph_theory.jpg" alt="Graph Theory">
+					<p class="work-para">Graph Theory</p>
+				</figure>
+			</li>
+		</ul>
+	</section>
+
+	<section class="services-section js--services-section">
+		<div class="row">
+			<h2 class="section-heading">Book Category</h2>
+			<h3 class="section-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+		</div>
+		<div class="row">
+			<div class="col span_1_of_4 service-box js--service-box">
+				<i class="fas fa-tags big-icon"></i>
+				<h4 class="service-heading">Academic</h4>
+				<a href="SDBookList.html" class="service-link">Browse Collection</a>
+			</div>
+			<div class="col span_1_of_4 service-box js--service-box">
+				<i class="fas fa-pen-alt big-icon"></i>
+				<h4 class="service-heading">Content</h4>
+				<a href="SDBookList.html" class="service-link">Browse Collection</a>
+			</div>
+			<div class="col span_1_of_4 service-box js--service-box">
+				<i class="fas fa-funnel-dollar big-icon"></i>
+				<h4 class="service-heading">Tech Business</h4>
+				<a href="SDBookList.html" class="service-link">Browse Collection</a>
+			</div>
+			<div class="col span_1_of_4 service-box js--service-box">
+				<i class="fas fa-code big-icon"></i>
+				<h4 class="service-heading">Software Development</h4>
+				<a href="SDBookList.html" class="service-link">Browse Collection</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="testimonials-section">
+		<div class="row">
+			<h2 class="testimonial-heading">MESSAGE FROM THE DESK OF</h2>
+		</div>
+		<div class="row">
+			<div class="col span_1_of_3 testimonial-box">
+				<blockquote>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+				</blockquote>
+				<cite><img src="~/resources/img/men.png" alt="VC" height="70px" width="70px">Vice Chancelor</cite>
+			</div>
+			<div class="col span_1_of_3 testimonial-box">
+				<blockquote>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+				</blockquote>
+				<cite><img src="~/resources/img/men.png" alt="Chairman" height="70px" width="70px">Chairman</cite>
+			</div>
+			<div class="col span_1_of_3 testimonial-box">
+				<blockquote>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+				</blockquote>
+				<cite><img src="~/resources/img/men.png" alt="Librarian" height="70px" width="70px">Librarian</cite>
+			</div>
+		</div>
+	</section>
+
+	<section class="packages-section js--packages-section">
+		<div class="row">
+			<h2 class="packages-heading">Check out Our Rules and Regulations</h2>
+		</div>
+		<div class="row">
+			<div class="col span_1_of_3">
+				<div class="package-box">
+					<div>
+						<h4 class="package-heading">Academic Book</h4>
+						<p class="package-price">Max <span>2 Weeks</span></p>
+						<p class="package-para">You can borrow the books from our library</p>
+					</div>
+					<div>
+						<ul>
+							<li><i class="fas fa-check small-icon"></i>Have to be Student of ICE</li>
+							<li><i class="fas fa-check small-icon"></i>Have to renew after a week</li>
+							<li><i class="fas fa-check small-icon"></i>Penelty starts aftr 2 weeks</li>
+
+						</ul>
+					</div>
+					<div>
+						<a asp-area="" asp-controller="Account" asp-action="Login" class="btn btn-full">Log in now</a>
+					</div>
+				</div>
+			</div>
+			<div class="col span_1_of_3">
+				<div class="package-box">
+					<div>
+						<h4 class="package-heading">Content Books</h4>
+						<p class="package-price">Max  <span>1 month</span></p>
+						<p class="package-para">You can borrow the books from our library</p>
+					</div>
+					<div>
+						<ul>
+							<li><i class="fas fa-check small-icon"></i>Have to be Student of ICE</li>
+							<li><i class="fas fa-check small-icon"></i>Have to renew after a week</li>
+							<li><i class="fas fa-check small-icon"></i>Penelty starts aftr 2 weeks</li>
+						</ul>
+					</div>
+					<div>
+						<a asp-area="" asp-controller="Account" asp-action="Login" class="btn btn-full">Log in now</a>
+					</div>
+				</div>
+			</div>
+			<div class="col span_1_of_3">
+				<div class="package-box js--enterprise">
+					<div>
+						<h4 class="package-heading">SD Books</h4>
+						<p class="package-price">Max  <span>20 Days</span></p>
+						<p class="package-para">You can borrow the books from our library</p>
+					</div>
+					<div>
+						<ul>
+							<li><i class="fas fa-check small-icon"></i>Have to be Student of ICE</li>
+							<li><i class="fas fa-check small-icon"></i>Have to renew after a week</li>
+							<li><i class="fas fa-check small-icon"></i>Penelty starts aftr 2 weeks</li>
+						</ul>
+					</div>
+					<div>
+						<a asp-area="" asp-controller="Account" asp-action="Login" class="btn btn-full">Log in now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="row">
+			<div class="col span_1_of_2">
+				<ul class="footer-nav">
+					<li><a href="#">About Us</a></li>
+					<li><a href="https://nstu.edu.bd/">NSTU Website</a></li>
+					<li><a href="#">Android App</a></li>
+				</ul>
+			</div>
+			<div class="col span_1_of_2">
+				<ul class="social-links">
+					<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<p> &copy; Department of ICE </p>
+		</div>
+	</footer>
+
+	@section Scripts
+	{
+	<script src="https://kit.fontawesome.com/f0b4d212f8.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+	<script src="~/resources/js/script.js"></script>
+	}
