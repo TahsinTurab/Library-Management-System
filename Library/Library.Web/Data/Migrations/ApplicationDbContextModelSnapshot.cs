@@ -38,7 +38,7 @@ namespace Library.Web.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Books");
+                    b.ToTable("Books", (string)null);
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.BookDetails", b =>
@@ -59,7 +59,7 @@ namespace Library.Web.Data.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.ToTable("BookDatails");
+                    b.ToTable("BookDatails", (string)null);
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.Borrow", b =>
@@ -90,7 +90,7 @@ namespace Library.Web.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Borrows");
+                    b.ToTable("Borrows", (string)null);
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.Course", b =>
@@ -109,7 +109,7 @@ namespace Library.Web.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Courses");
+                    b.ToTable("Courses", (string)null);
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.EBook", b =>
@@ -132,7 +132,7 @@ namespace Library.Web.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("EBooks");
+                    b.ToTable("EBooks", (string)null);
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.Note", b =>
@@ -160,7 +160,7 @@ namespace Library.Web.Data.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("Notes");
+                    b.ToTable("Notes", (string)null);
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.Renew", b =>
@@ -180,7 +180,7 @@ namespace Library.Web.Data.Migrations
 
                     b.HasIndex("BorrowId");
 
-                    b.ToTable("Renews");
+                    b.ToTable("Renews", (string)null);
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.Role", b =>
@@ -201,7 +201,7 @@ namespace Library.Web.Data.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("Roles");
+                    b.ToTable("Roles", (string)null);
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.User", b =>
@@ -213,19 +213,11 @@ namespace Library.Web.Data.Migrations
                     b.Property<int>("Batch")
                         .HasColumnType("int");
 
-                    b.Property<string>("Department")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsApproved")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Mobile")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -234,7 +226,7 @@ namespace Library.Web.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -574,8 +566,7 @@ namespace Library.Web.Data.Migrations
                 {
                     b.Navigation("BorrowedBook");
 
-                    b.Navigation("UserRole")
-                        .IsRequired();
+                    b.Navigation("UserRole");
                 });
 #pragma warning restore 612, 618
         }

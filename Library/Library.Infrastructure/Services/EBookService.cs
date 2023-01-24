@@ -19,7 +19,7 @@ namespace Library.Infrastructure.Services
 
         public async Task CreateEBookAsync(EBookBO ebook)
         {
-            var count = _applicationUnitOfWork.Books.GetCount(x => x.BookTitle == ebook.BookTitle);
+            var count = _applicationUnitOfWork.Books.GetCount(x => x.BookTitle == ebook.Title);
 
             if (count > 0)
             {

@@ -9,7 +9,7 @@ namespace Library.Web.Areas.App.Models.Books
     public class EBookCreateModel
     {
         [Required(ErrorMessage = "Title must be provided")]
-        public string BookTitle { get; set; }
+        public string Title { get; set; }
 
         [Required(ErrorMessage = "Author Name must be provided")]
         public string Author { get; set; }

@@ -2,6 +2,7 @@
 using Library.Infrastructure.DbContexts;
 using Library.Infrastructure.Repositories;
 using Library.Infrastructure.Services;
+using Library.Infrastructure.UnitOfWorks;
 
 namespace Library.Infrastructure
 {
@@ -26,6 +27,9 @@ namespace Library.Infrastructure
             builder.RegisterType<ApplicationDbContext>().As<IApplicationDbContext>()
                 .WithParameter("connectionString", _connectionString)
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<ApplicationUnitOfWork>().As<IApplicationUnitOfWork>()
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<BookService>().As<IBookService>()

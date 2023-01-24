@@ -38,7 +38,7 @@ namespace Library.Web.Areas.App.Controllers
         {
             if (ModelState.IsValid)
             {
-                model.BookTitle = model.BookTitle.ToLower();
+                model.Title = model.Title.ToLower();
                 model.ResolveDependency(_scope);
                 try
                 {
@@ -46,7 +46,7 @@ namespace Library.Web.Areas.App.Controllers
                     
                     TempData.Put<ResponseModel>("ResponseMessage", new ResponseModel
                     {
-                        Message = "Successfully Added Book - " + model.BookTitle,
+                        Message = "Successfully Added Book - " + model.Title,
                         Type = ResponseTypes.Success
                     });
                     
