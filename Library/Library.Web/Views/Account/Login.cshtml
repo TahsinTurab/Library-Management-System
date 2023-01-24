@@ -1,94 +1,87 @@
 ﻿@model LoginModel
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Log in";
 }
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Log in | Seminar Library</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/f0b4d212f8.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Library - Log in</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="~/vendors/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="~/vendors/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="~/vendors/favicon/favicon-16x16.png">
-    <link rel="manifest" href="~/vendors/favicon/site.webmanifest">
-
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="~/vendors/css/fluid.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="~/resources/css/style1.css">
-    <link rel="stylesheet" type="text/css" href="~/resources/css/media-query.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/assets/plugins/fontawesome-free/css/all.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="~/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/assets/css/adminlte.min.css">
+    <link rel="stylesheet" href="~/assets/css/main.css">
 </head>
-
-<header id="login">
-    <nav>
-        <img src="~/resources/img/nstu.png" alt="Library | ICE" class="logo">
-        <ul class="main-nav">
-            <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-            <li><a asp-area="" asp-controller="Account" asp-action="Login">Log in</a></li>
-            <li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
-        </ul>
-    </nav>
-    <div class="log-box">
-        <section class="contact-section js--contact" id="contact">
-            <div class="row">
-                <h2 class="contact-heading">Log in</h2>
-            </div>
-            <div class="row">
-                <form method="post" action="#" class="contact-form">
-                    <div class="row">
-                        <div class="col span_1_of_3 contact-label">
-                            <label for="email">Email</label>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="theme-gradient-color"><b>Library - ICE</b></a>
+        </div>
+        <!-- /.login-logo -->
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg mb-15">Sign in to start your session</p>
+                <form id="account" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="input-group mb-3">
+                        <input asp-for="Email" class="form-control" autocomplete="username" aria-required="true" placeholder="Email" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
                         </div>
-                        <div class="col span_2_of_3">
-                            <input type="text" name="email" id="email" placeholder="Your Email" required>
-                        </div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
-                    <div class="row">
-                        <div class="col span_1_of_3 contact-label">
-                            <label for="email">Password</label>
+                    <div class="input-group mb-3">
+                        <input asp-for="Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="Password" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
                         </div>
-                        <div class="col span_2_of_3">
-                            <input type="text" name="name" id="name" placeholder="Your Password" required>
-                        </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
-                    <div class="row">
-                        <div class="col span_1_of_3 contact-label">
-                            <label for="newsletter">Remember me?</label>
+                    <div class="row mt-30">
+                        <div class="col-8">
+                            <div class="icheck-primary">
+                                <label asp-for="RememberMe" class="form-label">
+                                    <input class="form-check-input" asp-for="RememberMe" />
+                                    @Html.DisplayNameFor(m => m.RememberMe)
+                                </label>
+                            </div>
                         </div>
-                        <div class="col span_2_of_3">
-                            <input type="checkbox" name="newsletter" id="newsletter">&nbsp;Yes, Please
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block devtrack-btn">Sign In</button>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col span_1_of_3">
-                            &nbsp;
-                        </div>
-                        <div class="col span_2_of_3">
-                            <button type="button" class="btn btn-primary btn-lg">Log in</button>
-
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-                        <div class="col span_1_of_3 contact-label">
-                            <label for="newsletter">Forget Password?</label>
-                        </div>
-                        <div class="col span_2_of_3">
-                            <input type="button" name="newsletter" id="newsletter">&nbsp;<a href="#" style="text-decoration:none;">Recover</a>
-                        </div>
+                        <!-- /.col -->
                     </div>
                 </form>
+                <p class="mb-1">
+                    <a id="forgot-password" asp-area="" asp-controller="Account" asp-action="ForgotPassword">Forgot your password?</a>
+                </p>
+                <p class="mb-0">
+                    <a asp-area="" asp-controller="Account" asp-action="Register" asp-route-returnUrl="@Model?.ReturnUrl" class="text-center">Register as a new user</a>
+                </p>
             </div>
-        </section>
+            <!-- /.login-card-body -->
+        </div>
     </div>
-</header>
-<!-- /.login-box -->
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
+    <!-- /.login-box -->
+    <!-- jQuery -->
+    <script src="~/assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/assets/js/adminlte.min.js"></script>
+</body>
+</html>
 

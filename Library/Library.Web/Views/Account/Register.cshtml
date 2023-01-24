@@ -3,118 +3,113 @@
     ViewData["Title"] = "Register a new membership";
 }
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Register | Seminar Library</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/f0b4d212f8.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Library - Registration </title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="~/vendors/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="~/vendors/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="~/vendors/favicon/favicon-16x16.png">
-    <link rel="manifest" href="~/vendors/favicon/site.webmanifest">
-
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="~/vendors/css/fluid.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="~/resources/css/style1.css">
-    <link rel="stylesheet" type="text/css" href="~/resources/css/media-query.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/assets/plugins/fontawesome-free/css/all.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="~/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/assets/css/adminlte.min.css">
+    <link rel="stylesheet" href="~/assets/css/main.css">
 </head>
+<body class="hold-transition register-page">
+    <div class="register-box">
+        <div class="register-logo">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="theme-gradient-color"><b>Library - ICE</b></a>
+        </div>
+        <div class="card">
+            <div class="card-body register-card-body">
+                <p class="login-box-msg mb-15">@ViewData["Title"]</p>
+                <form id="registerForm" asp-area="" asp-controller="Account" asp-action="Register" asp-route-returnUrl="@Model?.ReturnUrl" method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="input-group mb-3">
+                        <input asp-for="Email" type="email" class="form-control" autocomplete="username" aria-required="true" placeholder="Email" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
 
-<body>
-    <header id="register">
-        <section class="vh-100">
-            <div class="container h-100">
-                <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col-lg-12 col-xl-11">
-                        <div class="card text-black" style="border-radius: 25px;">
-                            <div class="card-body p-md-5">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                    <div class="input-group mb-3">
+                        <input asp-for="Password" type="password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Password" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
 
-                                        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+                    <div class="input-group mb-3">
+                        <input asp-for="ConfirmPassword" type="password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Retype password" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
 
-                                        <form class="mx-1 mx-md-4">
-
-                                            <div class="d-flex flex-row align-items-center mb-4">
-                                                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                                <div class="form-outline flex-fill mb-0">
-                                                    <input type="text" id="form3Example1c" class="form-control" />
-                                                    <label class="form-label" for="form3Example1c">Your Name</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex flex-row align-items-center mb-4">
-                                                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                                <div class="form-outline flex-fill mb-0">
-                                                    <input type="text" id="form3Example1c" class="form-control" />
-                                                    <label class="form-label" for="form3Example1c">Student Id</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex flex-row align-items-center mb-4">
-                                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                                <div class="form-outline flex-fill mb-0">
-                                                    <input type="email" id="form3Example3c" class="form-control" />
-                                                    <label class="form-label" for="form3Example3c">Your Email</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex flex-row align-items-center mb-4">
-                                                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                                <div class="form-outline flex-fill mb-0">
-                                                    <input type="password" id="form3Example4c" class="form-control" />
-                                                    <label class="form-label" for="form3Example4c">Password</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex flex-row align-items-center mb-4">
-                                                <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                                                <div class="form-outline flex-fill mb-0">
-                                                    <input type="password" id="form3Example4cd" class="form-control" />
-                                                    <label class="form-label" for="form3Example4cd">Repeat your password</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-check d-flex justify-content-center mb-5">
-                                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                                                <label class="form-check-label" for="form2Example3">
-                                                    I agree all statements in <a href="#!">Terms of service</a>
-                                                </label>
-                                            </div>
-
-                                            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                <button type="button" class="btn btn-primary btn-lg">Register</button>
-                                                &nbsp
-                                                &nbsp
-                                                <a asp-area="" asp-controller="Home" asp-action="Index">
-                                                    <button type="button" class="btn btn-primary btn-lg">Back</button>
-                                                </a>
-                                                
-                                            </div>
-
-                                        </form>
-
-                                    </div>
-                                    <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-
-                                        <img src="~/resources/img/nstu.png"
-                                             class="img-fluid" alt="Sample image">
-
-                                    </div>
-                                </div>
+                    <div class="input-group mb-3">
+                        <input asp-for="Name" type="text" class="form-control" autocomplete="name" aria-required="true" placeholder="Full Name" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
                             </div>
                         </div>
                     </div>
-                </div>
+
+                    <div class="input-group mb-3">
+                        <input asp-for="StudentId" type="text" class="form-control" autocomplete="name" aria-required="true" placeholder="Student Id" />
+                        <span asp-validation-for="StudentId" class="text-danger"></span>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-30">
+                        <div class="col-8">
+                            <div class="icheck-primary">
+                                <input type="checkbox" id="agreeTerms" name="terms" value="agree">
+                                <label for="agreeTerms">
+                                    I agree to the <a href="#">terms</a>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block devtrack-btn">Register</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
+                <a class="text-center" asp-area="" asp-controller="Account" asp-action="Login">I already have a membership</a>
             </div>
-        </section>
-
-    </header>
+            <!-- /.form-box -->
+        </div><!-- /.card -->
+    </div>
+    <!-- /.register-box -->
+    <!-- jQuery -->
+    <script src="~/assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/assets/js/adminlte.min.js"></script>
 </body>
+</html>
 
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
 

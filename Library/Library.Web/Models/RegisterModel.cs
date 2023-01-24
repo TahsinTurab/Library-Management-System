@@ -12,6 +12,9 @@ namespace Library.Web.Models
         [Required]
         public string Image { get; set; }
 
+        [Required]
+        public string StudentId { get; set; }
+
         [Required, EmailAddress]
         public string Email { get; set; }
 
