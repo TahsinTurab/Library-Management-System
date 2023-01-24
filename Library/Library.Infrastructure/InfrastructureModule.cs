@@ -1,5 +1,7 @@
 ﻿using Autofac;
 using Library.Infrastructure.DbContexts;
+using Library.Infrastructure.Repositories;
+using Library.Infrastructure.Services;
 
 namespace Library.Infrastructure
 {
@@ -21,12 +23,24 @@ namespace Library.Infrastructure
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
                 .InstancePerLifetimeScope();
 
-            //builder.RegisterType<ApplicationDbContext>().As<IApplicationDbContext>()
-            //    .WithParameter("connectionString", _connectionString)
-            //    .WithParameter("migrationAssemblyName", _migrationAssemblyName)
-            //    .InstancePerLifetimeScope();
+            builder.RegisterType<ApplicationDbContext>().As<IApplicationDbContext>()
+                .WithParameter("connectionString", _connectionString)
+                .WithParameter("migrationAssemblyName", _migrationAssemblyName)
+                .InstancePerLifetimeScope();
 
-            //base.Load(builder);
+            builder.RegisterType<BookService>().As<IBookService>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<BookRepository>().As<IBookRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<BookDetailsService>().As<IBookDetailsService>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<BookDetailsRepository>().As<IBookDetailsRepository>()
+                .InstancePerLifetimeScope();
+
+            base.Load(builder);
         }
     }
 }

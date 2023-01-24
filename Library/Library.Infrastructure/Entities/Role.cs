@@ -1,6 +1,6 @@
 ﻿namespace Library.Infrastructure.Entities
 {
-    public class Role
+    public class Role : IEntity<Guid>
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }

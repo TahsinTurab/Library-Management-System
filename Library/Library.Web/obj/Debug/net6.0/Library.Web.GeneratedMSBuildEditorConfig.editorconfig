@@ -16,6 +16,66 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Tahsin Hasan Turab\Desktop\Library-Management-System\Library\Library.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Book/Book.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXEJvb2tcQm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Book/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXEJvb2tcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Book/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXEJvb2tcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/EBook/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXEVCb29rXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Note/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXE5vdGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXFNoYXJlZFxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Shared/_ArchivePopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXFNoYXJlZFxfQXJjaGl2ZVBvcHVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Shared/_DeleteModalPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXFNoYXJlZFxfRGVsZXRlTW9kYWxQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Shared/_NavigationPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXFNoYXJlZFxfTmF2aWdhdGlvblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Shared/_ResponsePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXFNoYXJlZFxfUmVzcG9uc2VQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Shared/_TopbarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXFNoYXJlZFxfVG9wYmFyUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Student/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXFN0dWRlbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -55,6 +115,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-1xrm3jjyjy
 
 [C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

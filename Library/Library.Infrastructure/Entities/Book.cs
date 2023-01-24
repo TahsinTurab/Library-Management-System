@@ -1,6 +1,6 @@
 ﻿namespace Library.Infrastructure.Entities
 {
-    public class Book
+    public class Book : IEntity<Guid>
     {
         public Guid Id { get; set; }
         public string BookTitle { get; set; }

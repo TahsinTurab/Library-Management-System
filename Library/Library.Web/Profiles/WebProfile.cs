@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Library.Infrastructure.BusinessObjects;
+using Library.Web.Areas.App.Models.Books;
 
 namespace Library.Web.Profiles
 {
@@ -6,8 +8,8 @@ namespace Library.Web.Profiles
     {
         public WebProfile()
         {
-            //CreateMap<ProjectCreateModel, Project>()
-            //    .ReverseMap();
+            CreateMap<BookCreateModel, Book>()
+                .ReverseMap();
         }
     }
 }

@@ -25,10 +25,4 @@
 	  <ProjectReference Include="..\Library.Infrastructure\Library.Infrastructure.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Areas\App\Controllers\" />
-	  <Folder Include="Areas\App\Models\" />
-	  <Folder Include="Areas\App\Views\" />
-	</ItemGroup>
-
 </Project>

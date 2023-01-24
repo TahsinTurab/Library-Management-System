@@ -1,6 +1,6 @@
 ﻿namespace Library.Infrastructure.Entities
 {
-    public class Renew
+    public class Renew: IEntity<Guid>
     {
         public Guid Id { get; set; }
         public Guid BorrowId { get; set; }
