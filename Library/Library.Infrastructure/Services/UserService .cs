@@ -45,16 +45,43 @@ namespace Library.Infrastructure.Services
             foreach (var item in results.records)
             {
                 users.Add(_mapper.Map<UserBO>(item));
-                //foreach (var user in item.ProjectApplicationUsers)
-                //{
-                //    if (user.ApplicationUserId == userid)
-                //    {
-                //        projects.Add(_mapper.Map<ProjectBO>(item));
-                //    }
-                //}
+                
             }
 
             return (users, results.total, results.totalDisplay);
+        }
+
+        public async Task UserApprove(Guid id, bool isApprove)
+        {
+            var userEntity = await _applicationUnitOfWork.Users.GetByIdAsync(id);
+            if (userEntity != null)
+            {
+                userEntity.IsApproved= isApprove;
+
+                await _applicationUnitOfWork.SaveAsync();
+            }
+            else
+                throw new InvalidOperationException("not found!");
+        }
+
+        public async Task RemoveUserAsync(Guid userId)
+        {
+            var userEOList = await _applicationUnitOfWork.Users
+                .GetAsync(x => x.Id.Equals(userId), "");
+
+            var userEO = userEOList.FirstOrDefault();
+
+            if (userEO != null)
+            {
+                _applicationUnitOfWork.Users.Remove(userEO);
+                //userEO.Remove(userEOList.First(u => u.Id == userId));
+
+                await _applicationUnitOfWork.SaveAsync();
+            }
+            else
+                throw new InvalidOperationException("User was not found");
+
+            
         }
 
     }

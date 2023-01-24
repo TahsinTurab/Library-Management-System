@@ -22,6 +22,9 @@ namespace Library.Web
 
             builder.RegisterType<EBookListModel>().AsSelf();
 
+            builder.RegisterType<StudentApproveModel>().AsSelf();
+
+
             base.Load(builder);
         }
     }

@@ -61,11 +61,15 @@ namespace Library.Web.Areas.App.Models.Students
                                 record.Name,
                                 record.StudentId,
                                 record.Email,
-                                record.IsApproved.ToString(),
                                 record.Id.ToString()
                         }
                     ).ToArray()
             };
+        }
+
+        public async Task RemoveStudent(Guid userId)
+        {
+            await _userService.RemoveUserAsync(userId);
         }
     }
 }

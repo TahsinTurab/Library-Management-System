@@ -19,21 +19,19 @@ namespace Library.Web.Areas.App.Models.Students
         }
 
         public StudentApproveModel(IUserService userService, 
-            IMapper mapper, IHttpContextAccessor? httpContextAccessor)
+            IMapper mapper, IHttpContextAccessor? httpContextAccessor,
+            ILifetimeScope scope)
         {
             _userService = userService;
             _mapper = mapper;
             _httpContextAccessor = httpContextAccessor;
-        }
-
-        public void ResolveDependency(ILifetimeScope scope)
-        {
             _scope = scope;
-            _userService = _scope.Resolve<IUserService>();
-            _mapper = _scope.Resolve<IMapper>();
-            _httpContextAccessor = _scope.Resolve<IHttpContextAccessor>();
+            _scope.Resolve<IMapper>();
         }
 
-        
+        public async Task StudentApprove(Guid id, bool isApprove)
+        {
+            await _userService.UserApprove(id, isApprove);
+        }
     }
 }

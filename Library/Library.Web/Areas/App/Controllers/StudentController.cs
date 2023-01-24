@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Library.Web.Areas.App.Models.Books;
 using Library.Web.Areas.App.Models.Students;
+using Library.Web.Codes;
 using Library.Web.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -34,14 +35,26 @@ namespace Library.Web.Areas.App.Controllers
             return Json(model.GetPagedUsers(dataTableModel, stat));
         }
 
-        public IActionResult Remove(Guid studentId)
+        public async Task<IActionResult> Remove(Guid studentId)
         {
-            return View();
+            var model = _scope.Resolve<StudentListModel>();
+            await model.RemoveStudent(studentId);
+
+            return RedirectToAction(nameof(Index));
         }
 
-        public IActionResult Approve(Guid studentId)
+        public async Task<IActionResult> ApproveAsync(Guid studentId)
         {
-            return View();
+            var aproveModel = _scope.Resolve<StudentApproveModel>();
+
+            await aproveModel.StudentApprove(studentId, true);
+
+            TempData.Put<ResponseModel>("ResponseMessage", new ResponseModel
+            {
+                Message = "Student Approved",
+                Type = ResponseTypes.Success
+            });
+            return RedirectToAction(nameof(Index));
         }
     }
 
