@@ -38,16 +38,17 @@ namespace Library.Web.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Books", (string)null);
+                    b.ToTable("Books");
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.BookDetails", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    b.Property<int>("BookCode")
+                        .HasColumnType("int");
 
                     b.Property<Guid>("BookId")
                         .HasColumnType("uniqueidentifier");
@@ -59,7 +60,7 @@ namespace Library.Web.Data.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.ToTable("BookDatails", (string)null);
+                    b.ToTable("BookDatails");
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.Borrow", b =>
@@ -68,8 +69,8 @@ namespace Library.Web.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("BookDetailsId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("BookDetailsId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("IssueDate")
                         .HasColumnType("datetime2");
@@ -90,7 +91,7 @@ namespace Library.Web.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Borrows", (string)null);
+                    b.ToTable("Borrows");
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.Course", b =>
@@ -109,7 +110,7 @@ namespace Library.Web.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Courses", (string)null);
+                    b.ToTable("Courses");
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.EBook", b =>
@@ -132,7 +133,7 @@ namespace Library.Web.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("EBooks", (string)null);
+                    b.ToTable("EBooks");
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.Note", b =>
@@ -160,7 +161,7 @@ namespace Library.Web.Data.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("Notes", (string)null);
+                    b.ToTable("Notes");
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.Renew", b =>
@@ -180,7 +181,7 @@ namespace Library.Web.Data.Migrations
 
                     b.HasIndex("BorrowId");
 
-                    b.ToTable("Renews", (string)null);
+                    b.ToTable("Renews");
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.Role", b =>
@@ -201,7 +202,7 @@ namespace Library.Web.Data.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("Roles", (string)null);
+                    b.ToTable("Roles");
                 });
 
             modelBuilder.Entity("Library.Infrastructure.Entities.User", b =>
@@ -210,12 +211,12 @@ namespace Library.Web.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("Batch")
-                        .HasColumnType("int");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsApproved")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Mobile")
                         .HasColumnType("nvarchar(max)");
@@ -224,9 +225,13 @@ namespace Library.Web.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("StudentId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -566,7 +571,8 @@ namespace Library.Web.Data.Migrations
                 {
                     b.Navigation("BorrowedBook");
 
-                    b.Navigation("UserRole");
+                    b.Navigation("UserRole")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -4,7 +4,7 @@
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
-        public int BookDetailsId { get; set; }
+        public Guid BookDetailsId { get; set; }
         public DateTime IssueDate { get; set; }
         public DateTime ReturnDate { get; set; }
         public int RenewedTimes { get; set; }

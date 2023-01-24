@@ -9,7 +9,8 @@ namespace Library.Infrastructure.BusinessObjects
 {
     public class BookDetails
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
+        public int BookCode { get; set; }
         public Guid BookId { get; set; }
         public bool IsBorrowed { get; set; }
         public Book Book { get; set; }

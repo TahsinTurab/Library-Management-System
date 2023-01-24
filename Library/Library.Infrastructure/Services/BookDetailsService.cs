@@ -19,6 +19,7 @@ namespace Library.Infrastructure.Services
         public async Task CreateBookDetailsAsync(BookDetailsBO bookDetails)
         {
             var entity = _mapper.Map<BookDetailsEO>(bookDetails);
+
             await _applicationUnitOfWork.BookDetails.AddAsync(entity);
             await _applicationUnitOfWork.SaveAsync();
         }

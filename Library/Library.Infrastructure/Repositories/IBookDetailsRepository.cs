@@ -2,7 +2,7 @@
 
 namespace Library.Infrastructure.Repositories
 {
-    public interface IBookDetailsRepository : IRepository<BookDetails, int>
+    public interface IBookDetailsRepository : IRepository<BookDetails, Guid>
     {
     }
 }

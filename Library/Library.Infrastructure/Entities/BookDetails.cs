@@ -1,8 +1,9 @@
 ﻿namespace Library.Infrastructure.Entities
 {
-    public class BookDetails: IEntity<int>
+    public class BookDetails: IEntity<Guid>
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
+        public int BookCode { get; set; }
         public Guid BookId { get; set; }
         public bool IsBorrowed { get; set; }
         public Book Book { get; set; }

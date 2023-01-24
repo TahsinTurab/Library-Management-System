@@ -1,21 +1,27 @@
 ﻿@{
     var currentController = this.ViewContext.RouteData.Values["controller"].ToString();
     var activeStyle = "background-color: rgba(0,0,0, 0.3)";
-    var projectStyle = "";
-    var reportStyle = "";
-    var activityStyle = "";
+    var bookStyle = "";
+    var ebookStyle = "";
+    var noteStyle = "";
+    var studentStyle = "";
     if (currentController.Equals("Book"))
     {
-        projectStyle = activeStyle;
+        bookStyle = activeStyle;
     }
-    //else if (currentController.Equals("Report"))
-    //{
-    //    reportStyle = activeStyle;
-    //}
-    //else if (currentController.Equals("MyActivity"))
-    //{
-    //    activityStyle = activeStyle;
-    //}
+    else if (currentController.Equals("EBook"))
+    {
+        ebookStyle = activeStyle;
+    }
+    else if (currentController.Equals("Note"))
+    {
+        noteStyle = activeStyle;
+    }
+    else if (currentController.Equals("Student"))
+    {
+        studentStyle = activeStyle;
+    }
+
 }
 
 <aside class="main-sidebar sidebar-dark-primary elevation-4 devtrack-gradient-bg">
@@ -33,7 +39,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
-                <li class="nav-item" style="@projectStyle">
+                <li class="nav-item" style="@bookStyle">
                     <a class="nav-link white-color" asp-action="Index" asp-controller="Book" asp-area="App">
                         <i class="nav-icon fas fa-columns"></i>
                         <p>
@@ -41,7 +47,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item" style="@reportStyle">
+                <li class="nav-item" style="@ebookStyle">
                     <a class="nav-link" asp-action="Index" asp-controller="EBook" asp-area="App">
                         <i class="nav-icon fas fa-columns"></i>
                         <p>
@@ -49,7 +55,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item" style="@activityStyle">
+                <li class="nav-item" style="@noteStyle">
                     <a class="nav-link" asp-action="Index" asp-controller="Note" asp-area="App">
                         <i class="nav-icon far fa-copy"></i>
                         <p>
@@ -57,7 +63,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item" style="@activityStyle">
+                <li class="nav-item" style="@studentStyle">
                     <a class="nav-link" asp-action="Index" asp-controller="Student" asp-area="App">
                         <i class="nav-icon fas fa-chart-pie"></i>
                         <p>

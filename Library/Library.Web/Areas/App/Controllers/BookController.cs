@@ -99,6 +99,27 @@ namespace Library.Web.Areas.App.Controllers
                 return View(model);
             }
         }
+
+        [HttpPost, ValidateAntiForgeryToken]
+        public async Task<IActionResult> BookDetails(BookDetailsCreateModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.ResolveDependency(_scope);
+                await model.CreateBookDetailsAsync((Guid)TempData["BookID"]);
+                TempData.Remove("BookTitle");
+                TempData.Put<ResponseModel>("ResponseMessage", new ResponseModel
+                {
+                    Message = "Books Added",
+                    Type = ResponseTypes.Success
+                });
+            }
+            else
+            {
+                return View(model);
+            }
+            return RedirectToAction(nameof(Index));
+        }
     }
 
 

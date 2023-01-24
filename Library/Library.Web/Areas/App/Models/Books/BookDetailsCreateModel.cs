@@ -36,6 +36,8 @@ namespace Library.Web.Areas.App.Models.Books
                 if(id != null)
                 {
                     var bookDetails = new BookDetails();
+                    bookDetails.Id = Guid.NewGuid();
+                    bookDetails.BookCode = id;
                     bookDetails.BookId = BookId;
                     bookDetails.IsBorrowed = false;
 
