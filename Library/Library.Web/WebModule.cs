@@ -11,6 +11,8 @@ namespace Library.Web
 
             builder.RegisterType<BookDetailsCreateModel>().AsSelf();
 
+            builder.RegisterType<EBookCreateModel>().AsSelf();
+
             base.Load(builder);
         }
     }

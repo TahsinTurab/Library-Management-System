@@ -10,6 +10,9 @@ namespace Library.Web.Profiles
         {
             CreateMap<BookCreateModel, Book>()
                 .ReverseMap();
+
+            CreateMap<EBookCreateModel, EBook>()
+                .ReverseMap();
         }
     }
 }

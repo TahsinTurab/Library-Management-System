@@ -5,6 +5,7 @@ namespace Library.Infrastructure.UnitOfWorks
     public interface IApplicationUnitOfWork : IUnitOfWork
     {
         IBookRepository Books { get; }
+        IEBookRepository EBooks { get; }
         IBookDetailsRepository BookDetails { get; }
         //IApplicationUserRepository ApplicationUsers { get; }
         //IInvitationRepository Invitations { get; }

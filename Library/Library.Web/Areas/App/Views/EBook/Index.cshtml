@@ -1,7 +1,28 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
 }
 
-<h1>EBooks</h1>
+@section Styles{
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+}
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-6">
+                    <h1><b>eBooks</b></h1>
+                </div>
+                <div class="col-6">
+                    <div class="float-right">
+                        <a class="btn bg-gradient-success btn-flat" asp-action="Create" asp-controller="EBook" asp-area="App">Add New eBook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
 

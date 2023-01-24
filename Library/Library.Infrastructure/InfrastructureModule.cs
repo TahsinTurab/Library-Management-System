@@ -34,6 +34,12 @@ namespace Library.Infrastructure
             builder.RegisterType<BookRepository>().As<IBookRepository>()
                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<EBookService>().As<IEBookService>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<EBookRepository>().As<IEBookRepository>()
+                .InstancePerLifetimeScope();
+
             builder.RegisterType<BookDetailsService>().As<IBookDetailsService>()
                 .InstancePerLifetimeScope();
 
