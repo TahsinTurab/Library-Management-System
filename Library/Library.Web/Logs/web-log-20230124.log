@@ -384,3 +384,18 @@ System.InvalidOperationException: not found!
 2023-01-24 22:18:38.657 +06:00 [INF] Application Starting.
 2023-01-24 22:20:02.556 +06:00 [INF] Application Starting.
 2023-01-24 22:37:23.337 +06:00 [INF] Application Starting.
+2023-01-24 23:09:36.879 +06:00 [FTL] Application start-up failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Tahsin Hasan Turab\Desktop\Library-Management-System\Library\Library.Web\Program.cs:line 48
+2023-01-24 23:10:09.089 +06:00 [FTL] Application start-up failed
+Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Tahsin Hasan Turab\Desktop\Library-Management-System\Library\Library.Web\Program.cs:line 48
+2023-01-24 23:12:36.736 +06:00 [INF] Application Starting.

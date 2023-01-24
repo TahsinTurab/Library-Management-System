@@ -7,7 +7,6 @@ namespace Library.Infrastructure.DbContexts
     public interface IApplicationDbContext
     {
         DbSet<User> Users { get; set; }
-        DbSet<Role> Roles { get; set; }
         DbSet<Book> Books { get; set; }
         DbSet<BookDetails> BookDatails { get; set; }
         DbSet<Borrow> Borrows { get; set; }

@@ -8,7 +8,7 @@
         public string Email { get; set; }
         public string? Mobile { get; set; }
         public bool IsApproved { get; set; }
-        public Role UserRole { get; set; }
+        public string? UserRole { get; set; }
         public List<Borrow> BorrowedBook { get; set; }
     }
 }

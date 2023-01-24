@@ -30,10 +30,6 @@ namespace Library.Infrastructure.DbContexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>()
-                .HasOne(n => n.UserRole)
-                .WithOne(a => a.User)
-                .HasForeignKey<Role>(x => x.UserId);
 
             modelBuilder.Entity<User>()
                 .HasMany(a => a.BorrowedBook)
@@ -64,7 +60,6 @@ namespace Library.Infrastructure.DbContexts
         }
         
         public DbSet<User> Users { get; set; }
-        public DbSet<Role> Roles { get; set; }
         public DbSet<Book> Books { get; set; }
         public DbSet<BookDetails> BookDatails { get; set; }
         public DbSet<Borrow> Borrows { get; set; }

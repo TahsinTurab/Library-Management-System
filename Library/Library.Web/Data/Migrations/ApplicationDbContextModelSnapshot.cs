@@ -184,27 +184,6 @@ namespace Library.Web.Data.Migrations
                     b.ToTable("Renews");
                 });
 
-            modelBuilder.Entity("Library.Infrastructure.Entities.Role", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("UserRole")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
-
-                    b.ToTable("Roles");
-                });
-
             modelBuilder.Entity("Library.Infrastructure.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -227,6 +206,9 @@ namespace Library.Web.Data.Migrations
 
                     b.Property<string>("StudentId")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserRole")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -484,17 +466,6 @@ namespace Library.Web.Data.Migrations
                     b.Navigation("Borrow");
                 });
 
-            modelBuilder.Entity("Library.Infrastructure.Entities.Role", b =>
-                {
-                    b.HasOne("Library.Infrastructure.Entities.User", "User")
-                        .WithOne("UserRole")
-                        .HasForeignKey("Library.Infrastructure.Entities.Role", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -570,9 +541,6 @@ namespace Library.Web.Data.Migrations
             modelBuilder.Entity("Library.Infrastructure.Entities.User", b =>
                 {
                     b.Navigation("BorrowedBook");
-
-                    b.Navigation("UserRole")
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
