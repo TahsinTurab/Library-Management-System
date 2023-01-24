@@ -1,5 +1,7 @@
 ﻿using Autofac;
 using Library.Web.Areas.App.Models.Books;
+using Library.Web.Areas.App.Models.Students;
+using Library.Web.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis;
@@ -24,17 +26,23 @@ namespace Library.Web.Areas.App.Controllers
             return View();
         }
 
-        public IActionResult Create()
+        public JsonResult GetStudentData(string status)
         {
-            var model = _scope.Resolve<BookCreateModel>();
-            return View(model);
+            var dataTableModel = new DataTablesAjaxRequestModel(Request);
+            var model = _scope.Resolve<StudentListModel>();
+            bool.TryParse(status, out bool stat);
+            return Json(model.GetPagedUsers(dataTableModel, stat));
         }
 
-        //[HttpPost, ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Create(BookCreateModel model)
-        //{
-            
-        //}
+        public IActionResult Remove(Guid studentId)
+        {
+            return View();
+        }
+
+        public IActionResult Approve(Guid studentId)
+        {
+            return View();
+        }
     }
 
 

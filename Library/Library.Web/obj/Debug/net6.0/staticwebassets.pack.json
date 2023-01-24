@@ -8089,6 +8089,26 @@
       "PackagePath": "staticwebassets\\assets\\scss\\main.scss"
     },
     {
+      "Id": "C:\\Users\\Tahsin Hasan Turab\\Desktop\\Library-Management-System\\Library\\Library.Web\\wwwroot\\construction\\assets\\favicon.ico",
+      "PackagePath": "staticwebassets\\construction\\assets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Tahsin Hasan Turab\\Desktop\\Library-Management-System\\Library\\Library.Web\\wwwroot\\construction\\assets\\img\\bg-mobile-fallback.jpg",
+      "PackagePath": "staticwebassets\\construction\\assets\\img\\bg-mobile-fallback.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Tahsin Hasan Turab\\Desktop\\Library-Management-System\\Library\\Library.Web\\wwwroot\\construction\\assets\\mp4\\bg.mp4",
+      "PackagePath": "staticwebassets\\construction\\assets\\mp4\\bg.mp4"
+    },
+    {
+      "Id": "C:\\Users\\Tahsin Hasan Turab\\Desktop\\Library-Management-System\\Library\\Library.Web\\wwwroot\\construction\\css\\styles.css",
+      "PackagePath": "staticwebassets\\construction\\css\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\Tahsin Hasan Turab\\Desktop\\Library-Management-System\\Library\\Library.Web\\wwwroot\\construction\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\construction\\js\\scripts.js"
+    },
+    {
       "Id": "C:\\Users\\Tahsin Hasan Turab\\Desktop\\Library-Management-System\\Library\\Library.Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

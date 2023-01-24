@@ -50,6 +50,12 @@ namespace Library.Infrastructure
             builder.RegisterType<BookDetailsRepository>().As<IBookDetailsRepository>()
                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<UserService>().As<IUserService>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<UserRepository>().As<IUserRepository>()
+                .InstancePerLifetimeScope();
+
             base.Load(builder);
         }
     }

@@ -34,5 +34,28 @@ namespace Library.Infrastructure.Services
             return entity.Id;
         }
 
+        public (IList<BookBO> records, int total, int totalDisplay) GetBooks(int pageIndex,
+            int pageSize, string searchText, string orderby)
+        {
+            (IList<BookEO> records, int total, int totalDisplay) results = _applicationUnitOfWork
+                .Books.GetBooks(pageIndex, pageSize, searchText, orderby);
+
+            IList<BookBO> books = new List<BookBO>();
+
+            foreach (var item in results.records)
+            {
+                books.Add(_mapper.Map<BookBO>(item));
+                //foreach (var user in item.ProjectApplicationUsers)
+                //{
+                //    if (user.ApplicationUserId == userid)
+                //    {
+                //        projects.Add(_mapper.Map<ProjectBO>(item));
+                //    }
+                //}
+            }
+
+            return (books, results.total, results.totalDisplay);
+        }
+
     }
 }

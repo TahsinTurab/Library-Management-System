@@ -7,6 +7,8 @@ namespace Library.Infrastructure.UnitOfWorks
         IBookRepository Books { get; }
         IEBookRepository EBooks { get; }
         IBookDetailsRepository BookDetails { get; }
+
+        IUserRepository Users { get; }
         //IApplicationUserRepository ApplicationUsers { get; }
         //IInvitationRepository Invitations { get; }
         //IReportRepository Reports { get; }

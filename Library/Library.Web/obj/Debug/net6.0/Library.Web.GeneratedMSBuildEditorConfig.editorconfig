@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Tahsin Hasan Turab\Desktop\Library-Management-System\Library\Library.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Book/AddBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXEJvb2tcQWRkQm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Book/AssignBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXEJvb2tcQXNzaWduQm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Book/Book.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXEJvb2tcQm9vay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,8 +48,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXEVCb29rXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/LendBook/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXExlbmRCb29rXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Note/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXE5vdGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Renew/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwXFZpZXdzXFJlbmV3XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Tahsin Hasan Turab/Desktop/Library-Management-System/Library/Library.Web/Areas/App/Views/Shared/Error.cshtml]

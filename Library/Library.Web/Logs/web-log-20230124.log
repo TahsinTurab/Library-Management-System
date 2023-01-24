@@ -307,3 +307,55 @@ Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostExce
 2023-01-24 16:19:03.226 +06:00 [INF] Application Starting.
 2023-01-24 16:23:43.375 +06:00 [INF] Application Starting.
 2023-01-24 16:24:23.968 +06:00 [INF] Application Starting.
+2023-01-24 18:01:57.897 +06:00 [INF] Application Starting.
+2023-01-24 18:36:02.211 +06:00 [INF] Application Starting.
+2023-01-24 18:37:05.889 +06:00 [INF] Application Starting.
+2023-01-24 18:40:11.718 +06:00 [INF] Application Starting.
+2023-01-24 18:43:01.741 +06:00 [INF] Application Starting.
+2023-01-24 18:47:03.245 +06:00 [INF] Application Starting.
+2023-01-24 18:47:43.352 +06:00 [INF] Application Starting.
+2023-01-24 18:51:17.993 +06:00 [INF] Application Starting.
+2023-01-24 18:54:07.987 +06:00 [INF] Application Starting.
+2023-01-24 18:54:38.717 +06:00 [INF] Application Starting.
+2023-01-24 19:05:12.315 +06:00 [INF] Application Starting.
+2023-01-24 19:06:35.033 +06:00 [INF] Application Starting.
+2023-01-24 19:07:20.230 +06:00 [INF] Application Starting.
+2023-01-24 19:08:59.634 +06:00 [INF] Application Starting.
+2023-01-24 19:12:57.411 +06:00 [INF] Application Starting.
+2023-01-24 19:14:49.619 +06:00 [INF] Application Starting.
+2023-01-24 19:16:48.474 +06:00 [INF] Application Starting.
+2023-01-24 19:19:08.336 +06:00 [INF] Application Starting.
+2023-01-24 19:24:44.666 +06:00 [INF] Application Starting.
+2023-01-24 19:27:43.379 +06:00 [INF] Application Starting.
+2023-01-24 19:33:57.547 +06:00 [INF] Application Starting.
+2023-01-24 19:37:10.994 +06:00 [INF] Application Starting.
+2023-01-24 19:39:45.344 +06:00 [INF] Application Starting.
+2023-01-24 20:06:23.311 +06:00 [INF] Application Starting.
+2023-01-24 20:07:22.330 +06:00 [INF] Application Starting.
+2023-01-24 20:08:43.299 +06:00 [INF] Application Starting.
+2023-01-24 20:15:10.882 +06:00 [INF] Application Starting.
+2023-01-24 20:16:35.408 +06:00 [INF] Application Starting.
+2023-01-24 20:29:06.444 +06:00 [INF] Application Starting.
+2023-01-24 20:29:48.421 +06:00 [INF] Application Starting.
+2023-01-24 20:30:36.279 +06:00 [INF] Application Starting.
+2023-01-24 20:31:01.031 +06:00 [ERR] Book with same name already exists
+Library.Infrastructure.Exceptions.DuplicateException: Book with same name already exists
+   at Library.Infrastructure.Services.EBookService.CreateEBookAsync(EBook ebook) in C:\Users\Tahsin Hasan Turab\Desktop\Library-Management-System\Library\Library.Infrastructure\Services\EBookService.cs:line 26
+   at Library.Web.Areas.App.Models.Books.EBookCreateModel.CreateAsync() in C:\Users\Tahsin Hasan Turab\Desktop\Library-Management-System\Library\Library.Web\Areas\App\Models\Books\EBookCreateModel.cs:line 50
+   at Library.Web.Areas.App.Controllers.EBookController.Create(EBookCreateModel model) in C:\Users\Tahsin Hasan Turab\Desktop\Library-Management-System\Library\Library.Web\Areas\App\Controllers\EBookController.cs:line 45
+2023-01-24 20:32:47.541 +06:00 [INF] Application Starting.
+2023-01-24 20:34:00.693 +06:00 [INF] Application Starting.
+2023-01-24 20:34:31.109 +06:00 [ERR] Book with same name already exists
+Library.Infrastructure.Exceptions.DuplicateException: Book with same name already exists
+   at Library.Infrastructure.Services.EBookService.CreateEBookAsync(EBook ebook) in C:\Users\Tahsin Hasan Turab\Desktop\Library-Management-System\Library\Library.Infrastructure\Services\EBookService.cs:line 26
+   at Library.Web.Areas.App.Models.Books.EBookCreateModel.CreateAsync() in C:\Users\Tahsin Hasan Turab\Desktop\Library-Management-System\Library\Library.Web\Areas\App\Models\Books\EBookCreateModel.cs:line 50
+   at Library.Web.Areas.App.Controllers.EBookController.Create(EBookCreateModel model) in C:\Users\Tahsin Hasan Turab\Desktop\Library-Management-System\Library\Library.Web\Areas\App\Controllers\EBookController.cs:line 45
+2023-01-24 20:35:52.743 +06:00 [INF] Application Starting.
+2023-01-24 20:43:16.506 +06:00 [INF] Application Starting.
+2023-01-24 21:19:48.579 +06:00 [INF] Application Starting.
+2023-01-24 21:33:42.771 +06:00 [INF] Application Starting.
+2023-01-24 21:48:57.912 +06:00 [INF] Application Starting.
+2023-01-24 21:50:03.287 +06:00 [INF] Application Starting.
+2023-01-24 21:54:00.875 +06:00 [INF] Application Starting.
+2023-01-24 21:57:05.421 +06:00 [INF] Application Starting.
+2023-01-24 21:58:09.735 +06:00 [INF] Application Starting.

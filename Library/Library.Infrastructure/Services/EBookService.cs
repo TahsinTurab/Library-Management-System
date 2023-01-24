@@ -19,7 +19,7 @@ namespace Library.Infrastructure.Services
 
         public async Task CreateEBookAsync(EBookBO ebook)
         {
-            var count = _applicationUnitOfWork.Books.GetCount(x => x.BookTitle == ebook.Title);
+            var count = _applicationUnitOfWork.EBooks.GetCount(x => x.Title == ebook.Title);
 
             if (count > 0)
             {
@@ -30,6 +30,29 @@ namespace Library.Infrastructure.Services
 
             await _applicationUnitOfWork.EBooks.AddAsync(entity);
             await _applicationUnitOfWork.SaveAsync();
+        }
+
+        public (IList<EBookBO> records, int total, int totalDisplay) GetBooks(int pageIndex,
+            int pageSize, string searchText, string orderby)
+        {
+            (IList<EBookEO> records, int total, int totalDisplay) results = _applicationUnitOfWork
+                .EBooks.GetBooks(pageIndex, pageSize, searchText, orderby);
+
+            IList<EBookBO> books = new List<EBookBO>();
+
+            foreach (var item in results.records)
+            {
+                books.Add(_mapper.Map<EBookBO>(item));
+                //foreach (var user in item.ProjectApplicationUsers)
+                //{
+                //    if (user.ApplicationUserId == userid)
+                //    {
+                //        projects.Add(_mapper.Map<ProjectBO>(item));
+                //    }
+                //}
+            }
+
+            return (books, results.total, results.totalDisplay);
         }
 
     }

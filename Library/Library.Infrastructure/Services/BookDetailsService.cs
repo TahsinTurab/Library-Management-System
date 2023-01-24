@@ -24,5 +24,28 @@ namespace Library.Infrastructure.Services
             await _applicationUnitOfWork.SaveAsync();
         }
 
+        public (IList<BookDetailsBO> records, int total, int totalDisplay) GetBooks(int pageIndex,
+            int pageSize, string searchText, string orderby, Guid BookId)
+        {
+            (IList<BookDetailsEO> records, int total, int totalDisplay) results = _applicationUnitOfWork
+                .BookDetails.GetBooks(pageIndex, pageSize, searchText, orderby);
+
+            IList<BookDetailsBO> books = new List<BookDetailsBO>();
+
+            foreach (var item in results.records)
+            {
+                if(item.BookId == BookId)
+                    books.Add(_mapper.Map<BookDetailsBO>(item));
+                //foreach (var user in item.ProjectApplicationUsers)
+                //{
+                //    if (user.ApplicationUserId == userid)
+                //    {
+                //        projects.Add(_mapper.Map<ProjectBO>(item));
+                //    }
+                //}
+            }
+
+            return (books, results.total, results.totalDisplay);
+        }
     }
 }

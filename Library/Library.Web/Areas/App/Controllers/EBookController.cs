@@ -76,6 +76,14 @@ namespace Library.Web.Areas.App.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+        public JsonResult GetBookData()
+        {
+            var dataTableModel = new DataTablesAjaxRequestModel(Request);
+            var model = _scope.Resolve<EBookListModel>();
+            //bool.TryParse(status, out bool stat);
+            return Json(model.GetPagedBooks(dataTableModel));
+        }
     }
 
 

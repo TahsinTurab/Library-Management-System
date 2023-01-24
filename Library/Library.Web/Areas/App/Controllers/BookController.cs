@@ -103,23 +103,66 @@ namespace Library.Web.Areas.App.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public async Task<IActionResult> BookDetails(BookDetailsCreateModel model)
         {
-            if (ModelState.IsValid)
+            
+            model.ResolveDependency(_scope);
+            await model.CreateBookDetailsAsync((Guid)TempData["BookID"]);
+            TempData.Remove("BookTitle");
+            TempData.Put<ResponseModel>("ResponseMessage", new ResponseModel
             {
-                model.ResolveDependency(_scope);
-                await model.CreateBookDetailsAsync((Guid)TempData["BookID"]);
-                TempData.Remove("BookTitle");
-                TempData.Put<ResponseModel>("ResponseMessage", new ResponseModel
-                {
-                    Message = "Books Added",
-                    Type = ResponseTypes.Success
-                });
-            }
-            else
-            {
-                return View(model);
-            }
+                Message = "Books Added",
+                Type = ResponseTypes.Success
+            });
             return RedirectToAction(nameof(Index));
         }
+
+        public JsonResult GetBookData()
+        {
+            var dataTableModel = new DataTablesAjaxRequestModel(Request);
+            var model = _scope.Resolve<BookListModel>();
+            //bool.TryParse(status, out bool stat);
+            return Json(model.GetPagedBooks(dataTableModel));
+        }
+
+        public IActionResult AddBook(Guid BookId, string BookTitle)
+        {
+            TempData["BookID"] = BookId;
+            TempData["BookTitle"] = BookTitle;
+            var model = _scope.Resolve<BookDetailsCreateModel>();
+            model.BookTitle = (string)BookTitle;
+            return View(model);
+        }
+
+        [HttpPost, ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddBook(BookDetailsCreateModel model)
+        {
+            model.ResolveDependency(_scope);
+            await model.CreateBookDetailsAsync((Guid)TempData["BookID"]);
+            TempData.Remove("BookTitle");
+            TempData.Put<ResponseModel>("ResponseMessage", new ResponseModel
+            {
+                Message = "Books Added",
+                Type = ResponseTypes.Success
+            });
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult AssignBook(Guid BookId, string BookTitle)
+        {
+            TempData["BookID"] = BookId;
+            TempData["BookTitle"] = BookTitle;
+
+            return View();
+        }
+
+        public JsonResult GetBookDetailsData()
+        {
+            var BookId = (Guid)TempData["BookId"];
+            var dataTableModel = new DataTablesAjaxRequestModel(Request);
+            var model = _scope.Resolve<BookDetailsListModel>();
+            //bool.TryParse(status, out bool stat);
+            return Json(model.GetPagedBooks(dataTableModel,BookId));
+        }
+
     }
 
 

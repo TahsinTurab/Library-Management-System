@@ -4,7 +4,9 @@
     var bookStyle = "";
     var ebookStyle = "";
     var noteStyle = "";
+    var lendbookStyle = "";
     var studentStyle = "";
+    var renewStyle = "";
     if (currentController.Equals("Book"))
     {
         bookStyle = activeStyle;
@@ -20,6 +22,14 @@
     else if (currentController.Equals("Student"))
     {
         studentStyle = activeStyle;
+    }
+    else if (currentController.Equals("LendBook"))
+    {
+        lendbookStyle = activeStyle;
+    }
+    else if (currentController.Equals("Renew"))
+    {
+        renewStyle = activeStyle;
     }
 
 }
@@ -68,6 +78,22 @@
                         <i class="nav-icon fas fa-chart-pie"></i>
                         <p>
                             Students
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item" style="@lendbookStyle">
+                    <a class="nav-link white-color" asp-action="Index" asp-controller="LendBook" asp-area="App">
+                        <i class="nav-icon fas fa-columns"></i>
+                        <p>
+                            Lend Books
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item" style="@renewStyle">
+                    <a class="nav-link white-color" asp-action="Index" asp-controller="Renew" asp-area="App">
+                        <i class="nav-icon fas fa-columns"></i>
+                        <p>
+                            Renew Requests
                         </p>
                     </a>
                 </li>
