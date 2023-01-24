@@ -10,9 +10,6 @@ namespace Library.Web.Models
         public string Name { get; set; }
 
         [Required]
-        public string Image { get; set; }
-
-        [Required]
         public string StudentId { get; set; }
 
         [Required, EmailAddress]

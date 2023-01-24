@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Library.Web.Areas.App.Models.Books;
 using Library.Web.Areas.App.Models.Students;
+using Library.Web.Models;
 
 namespace Library.Web
 {
@@ -23,6 +24,8 @@ namespace Library.Web
             builder.RegisterType<EBookListModel>().AsSelf();
 
             builder.RegisterType<StudentApproveModel>().AsSelf();
+
+            builder.RegisterType<RegisterModel>().AsSelf();
 
 
             base.Load(builder);
