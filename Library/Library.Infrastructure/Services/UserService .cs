@@ -23,7 +23,7 @@ namespace Library.Infrastructure.Services
 
             if (count > 0)
             {
-                throw new DuplicateException("Book with same name already exists");
+                throw new DuplicateException("User with same email already exists");
             }
 
             var entity = _mapper.Map<UserEO>(user);

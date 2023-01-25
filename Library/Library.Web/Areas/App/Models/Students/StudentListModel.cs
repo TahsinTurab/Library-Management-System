@@ -71,5 +71,12 @@ namespace Library.Web.Areas.App.Models.Students
         {
             await _userService.RemoveUserAsync(userId);
         }
+
+        public async Task<Guid?> CreateAsync()
+        {
+            var book = _mapper.Map<User>(this);
+
+            return await _userService.CreateUserAsync(book);
+        }
     }
 }

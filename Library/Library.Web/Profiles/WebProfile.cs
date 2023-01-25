@@ -14,6 +14,9 @@ namespace Library.Web.Profiles
             CreateMap<EBookCreateModel, EBook>()
                 .ReverseMap();
 
+            CreateMap<StudentCreateModel, User>()
+                .ReverseMap();
+
             CreateMap<BookDetailsCreateModel, BookDetails>()
                 .ReverseMap();
         }

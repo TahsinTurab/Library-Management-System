@@ -145,3 +145,20 @@ System.InvalidOperationException: Unable to resolve service for type 'Microsoft.
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
 2023-01-25 06:54:53.527 +06:00 [INF] Application Starting.
+2023-01-25 07:19:59.720 +06:00 [INF] Application Starting.
+2023-01-25 07:21:59.169 +06:00 [INF] Application Starting.
+2023-01-25 07:23:25.535 +06:00 [INF] Application Starting.
+2023-01-25 07:23:48.017 +06:00 [ERR] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+StudentCreateModel -> User
+Library.Web.Areas.App.Models.Books.StudentCreateModel -> Library.Infrastructure.BusinessObjects.User
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+StudentCreateModel -> User
+Library.Web.Areas.App.Models.Books.StudentCreateModel -> Library.Infrastructure.BusinessObjects.User
+   at lambda_method684(Closure , Object , User , ResolutionContext )
+   at Library.Web.Areas.App.Models.Books.StudentCreateModel.CreateAsync() in C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Web\Areas\App\Models\Students\StudentCreateModel.cs:line 48
+   at Library.Web.Areas.App.Controllers.StudentController.Create(StudentCreateModel model) in C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Web\Areas\App\Controllers\StudentController.cs:line 78
+2023-01-25 07:25:41.847 +06:00 [INF] Application Starting.

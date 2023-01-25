@@ -15,6 +15,8 @@ namespace Library.Web
 
             builder.RegisterType<StudentListModel>().AsSelf();
 
+            builder.RegisterType<StudentCreateModel>().AsSelf();
+
             builder.RegisterType<BookDetailsCreateModel>().AsSelf();
 
             builder.RegisterType<BookDetailsListModel>().AsSelf();
