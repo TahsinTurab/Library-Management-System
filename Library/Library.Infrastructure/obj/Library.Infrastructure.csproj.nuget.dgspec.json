@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tahsin Hasan Turab\\Desktop\\Library-Management-System\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj": {}
+    "C:\\Users\\Tahsin Hasan Turab\\Desktop\\ice\\3-2\\Library-Management-System\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tahsin Hasan Turab\\Desktop\\Library-Management-System\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj": {
+    "C:\\Users\\Tahsin Hasan Turab\\Desktop\\ice\\3-2\\Library-Management-System\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tahsin Hasan Turab\\Desktop\\Library-Management-System\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Tahsin Hasan Turab\\Desktop\\ice\\3-2\\Library-Management-System\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj",
         "projectName": "Library.Infrastructure",
-        "projectPath": "C:\\Users\\Tahsin Hasan Turab\\Desktop\\Library-Management-System\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Tahsin Hasan Turab\\Desktop\\ice\\3-2\\Library-Management-System\\Library\\Library.Infrastructure\\Library.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Tahsin Hasan Turab\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tahsin Hasan Turab\\Desktop\\Library-Management-System\\Library\\Library.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Tahsin Hasan Turab\\Desktop\\ice\\3-2\\Library-Management-System\\Library\\Library.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tahsin Hasan Turab\\AppData\\Roaming\\NuGet\\NuGet.Config",

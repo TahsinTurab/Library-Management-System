@@ -26,3 +26,17 @@ C:\Users\Tahsin Hasan Turab\Desktop\Library-Management-System\Library\Library.In
 C:\Users\Tahsin Hasan Turab\Desktop\Library-Management-System\Library\Library.Infrastructure\obj\Debug\net6.0\Library.Infrastructure.pdb
 C:\Users\Tahsin Hasan Turab\Desktop\Library-Management-System\Library\Library.Infrastructure\obj\Debug\net6.0\Library.Infrastructure.genruntimeconfig.cache
 C:\Users\Tahsin Hasan Turab\Desktop\Library-Management-System\Library\Library.Infrastructure\obj\Debug\net6.0\ref\Library.Infrastructure.dll
+C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Infrastructure\obj\Debug\net6.0\Library.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Infrastructure\obj\Debug\net6.0\Library.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Infrastructure\obj\Debug\net6.0\Library.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Infrastructure\obj\Debug\net6.0\Library.Infrastructure.AssemblyInfo.cs
+C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Infrastructure\obj\Debug\net6.0\Library.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Infrastructure\obj\Debug\net6.0\Library.Infrastructure.dll
+C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Infrastructure\obj\Debug\net6.0\refint\Library.Infrastructure.dll
+C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Infrastructure\obj\Debug\net6.0\Library.Infrastructure.pdb
+C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Infrastructure\bin\Debug\net6.0\Library.Infrastructure.deps.json
+C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Infrastructure\bin\Debug\net6.0\Library.Infrastructure.runtimeconfig.json
+C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Infrastructure\bin\Debug\net6.0\Library.Infrastructure.dll
+C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Infrastructure\bin\Debug\net6.0\Library.Infrastructure.pdb
+C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Infrastructure\obj\Debug\net6.0\Library.Infrastructure.genruntimeconfig.cache
+C:\Users\Tahsin Hasan Turab\Desktop\ice\3-2\Library-Management-System\Library\Library.Infrastructure\obj\Debug\net6.0\ref\Library.Infrastructure.dll
